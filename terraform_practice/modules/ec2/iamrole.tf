@@ -13,3 +13,4 @@ resource "aws_iam_role" "ec2_instance" {
     }]
   })
 }
+
