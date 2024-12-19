@@ -1,0 +1,5 @@
+ec2_instance_profile_name =  "ec2-instance-profile"
+policy_name = "s3-policy"
+instance_type = "t3.micro"
+instance_name = "instance-module"
+role_name = "ec2-access"

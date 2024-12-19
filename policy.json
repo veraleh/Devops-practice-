@@ -1,0 +1,16 @@
+{
+    "Id": "Policy1734611046476",
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "Stmt1734611029380",
+        "Action": [
+          "s3:AssociateAccessGrantsIdentityCenter",
+          "s3:BypassGovernanceRetention",
+          "s3:CreateAccessGrant"
+        ],
+        "Effect": "Allow",
+        "Resource": "*"
+      }
+    ]
+  }
