@@ -13,11 +13,11 @@ variable "role_name" {
   description = "This is name of the IAM role"
 }
 
-variable "assume_role_policy" {
-  type = string
-  description = "describes the profile that the role can trust"
-  default = null
-}
+# variable "assume_role_policy" {
+#   type = string
+#   description = "describes the profile that the role can trust"
+#   default = null
+# }
 
 variable "policy_name" {
   type = string
@@ -38,3 +38,13 @@ variable "ec2_instance_profile_name" {
 
   
 }
+
+variable "vpc_id" {
+      type = string
+      
+    }
+
+    variable "subnet_id" {
+      type = string
+      
+    }
