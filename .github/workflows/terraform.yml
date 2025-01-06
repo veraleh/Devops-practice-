@@ -27,7 +27,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: terraform-init
-          path: ../Devops-practice-/
+          path: ./Devops-practice-/
 
   validate:
     runs-on: ubuntu-latest
@@ -44,7 +44,7 @@ jobs:
 
       - name: removed existing terraform files
         run: |
-          rm -r ./terraform_practice
+          rm -r ./Devops-practice-
           ls -la
 
       - name: Download Terraform Folder
