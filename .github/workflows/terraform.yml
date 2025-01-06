@@ -44,9 +44,8 @@ jobs:
 
       - name: removed existing terraform files
         run: |
-           ls -la
-          rm -r ./**
           ls -la
+          rm -r ./**
 
       - name: Download Terraform Folder
         uses: actions/download-artifact@v3
