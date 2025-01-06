@@ -1,3 +1,9 @@
+module "vpc" {
+  source = "./terraform_practice/modules/vpc"
+
+  
+}
+
 module "ec2" {
   source = "./terraform_practice/modules/ec2"
   role_name = var.role_name
@@ -17,6 +23,8 @@ module "ec2" {
   })
 
   policy_type = file("policy.json")
+  subnet_id = module.vpc.public_subnet_b_id
+  vpc_id = module.vpc.vpc_id
         
 
 }
