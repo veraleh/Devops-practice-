@@ -44,7 +44,8 @@ jobs:
 
       - name: removed existing terraform files
         run: |
-          rm -r ./Devops-practice-
+           ls -la
+          rm -r ./**
           ls -la
 
       - name: Download Terraform Folder
