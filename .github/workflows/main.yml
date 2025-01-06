@@ -21,14 +21,14 @@ jobs:
       - name: Terraform Init
         id: init-step
         run: |
-          cd ./DEVOPS_PRACTICE
+          cd ./Devops_practice
           terraform init
 
       - name: Upload Terraform Folder
         uses: actions/upload-artifact@v3
         with:
           name: terraform-init
-          path: ./DEVOPS_PRACTICE/
+          path: ./Devops_practice/
 
   validate:
     runs-on: ubuntu-latest
