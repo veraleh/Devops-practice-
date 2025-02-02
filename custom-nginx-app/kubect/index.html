@@ -1,0 +1,10 @@
+<html>
+    <head><title>StatefulSet Demo</title></head>
+    <body>
+    <h1>Hello from my-app</h1>
+    <p>I'm a pod in the StatefulSet. My hostname is <span id="hostname"></span></p>
+      <script>
+          fetch('/hostname').then(r => r.text()).then(t => document.getElementById('hostname').innerText = t);
+      </script>
+    </body>
+    </html>
