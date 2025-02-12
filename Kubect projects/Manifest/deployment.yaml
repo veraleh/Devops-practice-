@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: python-app
-        image: veraleh/flaskapp:latest
+        image:  veraleh/flaskapp:latest
         ports:
         - containerPort: 80
         livenessProbe:
