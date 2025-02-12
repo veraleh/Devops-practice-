@@ -67,14 +67,14 @@ data:
           - role: node
         relabel_configs:
           - action: labelmap
-            regex: __meta_kubernetes_node_label_(.+)
-          - target_label: __address__
+            regex: _meta_kubernetes_node_label(.+)
+          - target_label: _address_
             replacement: kubernetes.default.svc:443
           - source_labels: [__meta_kubernetes_node_name]
             regex: (.+)
-            target_label: __metrics_path__
+            target_label: _metrics_path_
             replacement: /api/v1/nodes/$1/proxy/metrics
-          - source_labels: [__address__]
+          - source_labels: [_address_]
             regex: (.*)
             target_label: address
             replacement: $1
@@ -88,14 +88,14 @@ data:
             regex: "true"
           - source_labels: [__meta_kubernetes_service_annotation_prometheus_io_path]
             action: replace
-            target_label: __metrics_path__
+            target_label: _metrics_path_
             regex: (.+)
-          - source_labels: [__address__, __meta_kubernetes_service_annotation_prometheus_io_port]
+          - source_labels: [_address_, __meta_kubernetes_service_annotation_prometheus_io_port]
             action: replace
-            target_label: __address__
+            target_label: _address_
             regex: ([^:]+)(?::\d+)?;(\d+)
             replacement: $1:$2
           - target_label: address
             replacement: $1
             source_labels:
-            - __address__
+            - _address_

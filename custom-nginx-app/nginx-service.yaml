@@ -1,0 +1,13 @@
+        apiVersion: v1
+        kind: Service
+        metadata:
+          name: my-nginx-service # Choose a meaningful name
+        spec:
+          selector:
+            app: nginx  # VERY IMPORTANT: Matches the pod's labels
+          ports:
+            - protocol: TCP
+              port: 80
+              targetPort: 80  # Matches the port Nginx is listening on in the container
+          type: ClusterIP # Use ClusterIP for internal access and port-forwarding
+        
